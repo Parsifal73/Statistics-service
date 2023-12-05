@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener - Statistics</title>
+</head>
+<body>
+    <h1>URL Shortener - Statistics</h1>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Pid</th>
+            <th>URL</th>
+            <th>SourceIP</th>
+            <th>TimeInterval</th>
+            <th>Count</th>
+        </tr>
+        {% for stat in stats %}
+            <tr>
+                <td>{{ stat.Id }}</td>
+                <td>{{ stat.Pid }}</td>
+                <td>{{ stat.URL }}</td>
+                <td>{{ stat.SourceIP }}</td>
+                <td>{{ stat.TimeInterval }}</td>
+                <td>{{ stat.Count }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
